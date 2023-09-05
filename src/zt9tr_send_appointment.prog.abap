@@ -64,7 +64,7 @@ CLASS main IMPLEMENTATION.
     " time zone will be the one from the user master records settings
     appointment->set_date( date_from = p_date
                            time_from = p_from
-                           time_to   = p_to ). "Central european time
+                           time_to   = p_to ).
     " set it to a high priority meeting
     appointment->set_priority( sccon_prio_very_high ).
 
@@ -77,10 +77,14 @@ CLASS main IMPLEMENTATION.
         " Now that we have the appointment, we can send a good one for outlook by switching to BCS
         DATA(send_request) = appointment->create_send_request( ).
         DATA(recipient) = cl_cam_address_bcs=>create_internet_address( p_mail ).
-        send_request->add_recipient( i_recipient = recipient i_copy = abap_true ).
+        send_request->add_recipient(
+          i_recipient = recipient
+          i_copy = abap_true ).
         IF p_mail2 IS NOT INITIAL.
           DATA(recipient2) = cl_cam_address_bcs=>create_internet_address( p_mail2 ).
-          send_request->add_recipient( i_recipient = recipient2 i_copy = abap_true ).
+          send_request->add_recipient(
+            i_recipient = recipient2
+            i_copy = abap_true ).
         ENDIF.
       CATCH cx_address_bcs INTO DATA(error_address).
         MESSAGE error_address TYPE 'I'.
