@@ -1,4 +1,4 @@
-REPORT zt9tr_send_appointment.
+REPORT zt9r_send_appointment.
 
 INCLUDE <cntn01>.
 TYPE-POOLS: sccon.
