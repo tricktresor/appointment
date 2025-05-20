@@ -4,8 +4,8 @@ INCLUDE <cntn01>.
 TYPE-POOLS: sccon.
 
 PARAMETERS p_orga  TYPE xubname    DEFAULT sy-uname OBLIGATORY.
-PARAMETERS p_mail  TYPE ad_smtpadr DEFAULT 'ewf@inwerken.de' OBLIGATORY.
-PARAMETERS p_mail2 TYPE ad_smtpadr DEFAULT 'lmr@inwerken.de'.
+PARAMETERS p_mail  TYPE ad_smtpadr DEFAULT 'test1@yourdomain.de' OBLIGATORY.
+PARAMETERS p_mail2 TYPE ad_smtpadr DEFAULT 'test2@yourdomain.de'.
 PARAMETERS p_title TYPE sc_txtshor DEFAULT 'Geschäftsessen'.
 PARAMETERS p_loc   TYPE sc_room    DEFAULT 'La Civetta'.
 PARAMETERS p_date  TYPE sy-datum   DEFAULT sy-datum.
